@@ -1,0 +1,31 @@
+﻿@page
+@model Rent_A_House.Pages.Houses.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>House</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.House.HouseOwner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.House.HouseOwner.HouseOwnerRegistrationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.House.HouseAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.House.HouseAddress)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-success" asp-page="./Edit" asp-route-id="@Model.House.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
